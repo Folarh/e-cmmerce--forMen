@@ -1,0 +1,50 @@
+.container{
+   box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 50px;
+    color: var(--white);
+    /* background-image: url(../assets/piano1.png); */
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/polo3.png);
+    
+   
+}
+
+.text{
+    padding: 30px;
+}
+
+.text h3{
+    color: var(--white);
+}
+
+
+.text span{
+    color: red;
+}
+
+.text h3{
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.text p{
+    color:  var(--white);
+    margin-top: 20px;
+}
+
+.text button{
+    padding:10px;
+    background-color:  var(--color);
+    color: #f1f1f1;
+    border: none;
+     margin-top: 20px;
+     margin-right: 3px;
+}
+
+.text button:hover{
+    background-color:  crimson;
+    color: #f1f1f1;
+    font-weight: 800;
+}

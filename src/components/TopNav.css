@@ -1,0 +1,57 @@
+.top-nav{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    padding: 40px;
+    flex-direction: column;
+   text-align: center;
+   line-height: 3rem;
+   
+}
+
+.search-bar{ 
+    flex: 1;  
+} 
+
+
+ .search-bar input{
+   padding: 10px;
+   width: 50%;
+ 
+  
+} 
+
+.search-bar ::placeholder{
+    color:var(--color);
+}
+
+.search-bar button{
+    background-color: var(--color);
+    color:var(--white);
+    padding: 12px;
+    border: none;
+}
+
+.search-bar button:hover{
+    background-color: crimson;
+    color:var(--white);
+    font-weight: 600;
+}
+
+.accordion{
+    align-items: center;
+    font-weight: 900;
+   
+}
+
+.accordion span{
+    background: linear-gradient(to right, crimson,red, var(--color))
+}
+
+.telephone{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,0 +1,9 @@
+footer{
+    padding:20px;
+    color: var(--white);
+    /* background-color: var(--color); */
+    font-size: 1rem;
+    line-height: 30px;
+    background-color: black;
+}
+
