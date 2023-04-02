@@ -1,7 +1,7 @@
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     min-height: 70px;
@@ -11,7 +11,7 @@ nav{
     position: sticky;
     z-index: 100;
     background-color: var(--color);
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 
@@ -47,12 +47,10 @@ nav{
 }
 
 @media(max-width: 760px){
-    .nav-links{
+    .nav-links, .nav-icons{
         display: none;
     }
-    .nav-icons{
-        display: none;
-    }
+   
     .menu-icon{
         display: flex;
     }

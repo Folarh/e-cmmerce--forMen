@@ -7,18 +7,20 @@ function NavBar() {
   return (
   <nav>
         <div className="logo">
-            <h1>FOR<span>MEN</span></h1>
+            <h1>ALL<span>CCESSORIES</span></h1>
         </div>
         <div className="nav-links">
           <ul>
-            <li><Link>Home</Link></li>
-            <li><Link>About</Link></li>
-            <li><Link>Shop</Link></li>
-            <li><Link>Contact</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
         <div className="nav-icons">
-           <ShoppingCartIcon/>
+          <Link to="/cart">
+          <ShoppingCartIcon/>
+          </Link>
+          
             </div>
 
             <div className="menu-icon">
