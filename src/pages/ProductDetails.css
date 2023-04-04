@@ -16,6 +16,7 @@
 
 .cashout-image{
     flex: 0.4;
+    box-shadow: var(--box-shadow);
 }
 
 .cashout-details{

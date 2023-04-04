@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
+import { useShop } from "../context/useShop";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import './NavBar.css'
 
 function NavBar() {
+  const {
+    state: {cart},
+  } = useShop();
   return (
   <nav>
         <div className="logo">
@@ -20,6 +24,7 @@ function NavBar() {
           <Link to="/cart">
           <ShoppingCartIcon/>
           </Link>
+          <span>{cart.length}</span>
           
             </div>
 

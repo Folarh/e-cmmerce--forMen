@@ -8,14 +8,13 @@
 .card-item{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    border: 2px solid blue;
 }
 
 .card-item .cart-image{
     flex: 0.2;
-    border: 2px solid red;
     align-items: center;
     text-align: center;
     margin-right: 10px;
@@ -23,31 +22,89 @@
 
 .card-item img{
     height: 100px;
-    width: 300px;
+    width: 200px;
    
 }
 
 .card-item .item-title{
     flex: 0.4;
-    border: 2px solid yellow;
-    text-align: center;
+  text-align: center;
     margin-right: 10px;
+    color: steelblue;
+    font-weight: 800;
 }
 
 .card-item .item-price{
     flex: 0.1;
-    border: 2px solid green;
     text-align: center;
     margin-right: 10px;
+    color: green;
 }
 .card-item .quantity{
     flex: 0.2;
-    border: 2px solid pink;
     text-align: center;
     margin-right: 10px;
 }
+.quantity button{
+    width: 50px;
+}
 .card-item .remove{
     flex: 0.1;
-    border: 2px solid brown;
     text-align: center;
+    color: crimson;
+    cursor: pointer;
 }
+
+.check-out{
+    border-top: 3px dotted grey;
+    text-align: right;
+    padding: 20px;
+}
+
+.check-out .item-total{
+    font-weight: 800;
+    font-style: oblique;
+    margin-top: 10px;
+}
+
+.check-out button{
+    padding: 10px;
+    background-color: var(--color);
+    color: var(--white);
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.check-out button:hover{
+   color: white;
+   background-color: crimson;
+   font-weight: 800;
+
+}
+
+@media(max-width: 760px){
+    .card-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .card-item .item-price{
+       margin-bottom: 10px;
+    }
+    .quantity{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    .quantity button{
+        width: 50px;
+    }
+    
+    }

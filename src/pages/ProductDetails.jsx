@@ -1,16 +1,35 @@
 import { useParams } from "react-router-dom"
 import { useFetch } from "../hooks/useFetch"
-import { useContext } from "react"
-import { ShopContext } from "../context/ShopContext"
+import { useShop } from "../context/useShop"
 import "./ProductDetails.css"
 
 export default function ProductDetails() {
   const {id}= useParams()
     const {data , loading, error}= useFetch("https://fakestoreapi.com/products/"+id)
 
-    const GlobalState = useContext(ShopContext)
-    const add = GlobalState.dispatch;
-    console.log(GlobalState)
+    const {
+      state: {cart},
+      dispatch,
+
+    } = useShop();
+
+    const addCart =(item)=>{
+      dispatch({
+        type: 'ADD_T0_CART',
+        payload: item,
+      })
+    }
+
+   
+
+    
+
+    const removeCart =(item)=>{
+      dispatch({
+        type: 'REMOVE_CART',
+        payload: item,
+      })
+    }
    
    
   return (
@@ -30,13 +49,18 @@ export default function ProductDetails() {
        <h3>Rating : {data.rating.rate} </h3>
        <h2 className="price">${data.price}</h2> 
          <p>{data.description}</p>
-         {/* <div className="controls">
-          <button>-</button> 0 <button>+</button>
          
         
-        </div> */}
+        {/* </div>  */}
         <p className="category">Category :<span>{data.category}</span></p>
-         <button className="cart" onClick={()=>add({type:'ADD_T0_CART', payload:data})} >ADD To Cart</button>
+        {cart.some(prod=> prod.id === data.id)?(
+           <button className="cart" onClick={()=>removeCart(data)} >Remove from Cart</button>
+        ):(
+          <button className="cart" onClick={()=>addCart(data)} >ADD To Cart</button>
+        )
+        }
+        
+         
        
          </div>
        </div>

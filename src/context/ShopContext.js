@@ -3,43 +3,41 @@ import React, { createContext, useReducer } from 'react'
 
 export const ShopContext = createContext();
 
+export const ShopReducer =(state, action)=>{
+  switch(action.type){
+    case 'ADD_T0_CART':
+      return{...state, cart: [...state.cart,{...action.payload, qty: 1}]};
+
+      case 'REMOVE_CART':
+      return{...state, cart: state.cart.filter((product)=> product.id !==action.payload.id),};
+
+      case 'CHANGE_QTY':
+        return{
+          ...state,
+          cart: state.cart.filter((product)=>
+          product.id=== action.payload.id
+          ?(product.qty = action.payload.qty)
+          : product.qty
+          ),
+        };
+      default:
+        return state;
+      
+  }
+};
+
 
 export const ShopProvider = ({children})=>{
 // custom logic
-const ShopReducer =(state, action)=>{
-  switch(action.type){
-    case 'ADD_T0_CART':
-      //preventing multiple add from d same product.
-      const tempstate= state.filter((item)=>action.payload.id===item.id)
-      if(tempstate.length>0){
-        return state
-      }else{
-        return [...state,  action.payload];
-      }
+const [state, dispatch]= useReducer(ShopReducer,{
+  cart : [],
+})
 
-
-      // case 'INCREMENT':
-      //   const tempstate1=state.map((item)=>{
-      //     if(item.id===action.payload){
-      //       return{...item, quantity:item.quantity+1}
-      //     }
-      //   })
-
-     
-      case 'REMOVE_FROM_CART':
-        return ""
-    default: return state;
-  }
-}
- const [state, dispatch]=useReducer(ShopReducer, []);
- const info ={state, dispatch}
-
-
-  return(
-    <ShopContext.Provider value={info}>
+ return(
+    <ShopContext.Provider value={{state, dispatch}}>
       {children}
     </ShopContext.Provider>
-  )
+  );
 
-}
+};
 

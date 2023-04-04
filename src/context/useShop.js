@@ -8,9 +8,9 @@ export  function useShop() {
     if (context === undefined){
         throw new Error(" useShop() must be used inside a ShopProvider")
     }
-  return context
+  return context;
     
   
-}
+};
 
 
