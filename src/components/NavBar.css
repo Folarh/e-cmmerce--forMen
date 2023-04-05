@@ -6,11 +6,11 @@ nav{
     padding: 10px;
     min-height: 70px;
     border-bottom: 2px solid var(--white);
-    color: var(--white);
+    color:  var(--color);
     top:0;
     position: sticky;
+    background-color:  var(--white);
     z-index: 100;
-    background-color: var(--color);
     max-width: 100%;
 }
 
@@ -34,7 +34,10 @@ nav{
 }
 
 .nav-links ul a{
-    color:  var(--white);
+    color:  crimson;
+    font-weight: 800;
+
+
 }
 
 .nav-links ul a:hover{
@@ -43,20 +46,59 @@ nav{
 }
 
 .nav-icons a{
-    color: white;
+    /* color: white; */
+    color:  var(--color);
+
 }
 
 .menu-icon{
     display: none;
 }
 
+
+
+
 @media(max-width: 760px){
-    .nav-links, .nav-icons{
+    .nav-links{
         display: none;
+    }
+
+    .nav-icons{
+
     }
    
     .menu-icon{
         display: flex;
     }
+    #hidden{
+        position: absolute;
+        /* right: 70px; */
+        top: 70px;
+        height: 70vh;
+        max-height: 1500px;
+        width: 100%;
+        max-width: 100vw;
+        background-color:white;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        line-height: 40px;
+        
+    }
+
+    #hidden ul{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    
+    #hidden a{
+        margin: 10px;
+        font-size: 15px;
+        color: red;
+        }
 }
 

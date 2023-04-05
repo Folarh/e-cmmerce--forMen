@@ -50,8 +50,6 @@ export default function ProductDetails() {
        <h2 className="price">${data.price}</h2> 
          <p>{data.description}</p>
          
-        
-        {/* </div>  */}
         <p className="category">Category :<span>{data.category}</span></p>
         {cart.some(prod=> prod.id === data.id)?(
            <button className="cart" onClick={()=>removeCart(data)} >Remove from Cart</button>

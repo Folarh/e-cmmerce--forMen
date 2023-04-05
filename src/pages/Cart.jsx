@@ -56,12 +56,15 @@ export default function Cart() {
         </div>
        
        ))}
+
+       {total >0 ?
        <div className='check-out'>
        <h3 className='item-price'>Subtotal({cart.length})</h3>
            <p className='item-total'> Total: ${total}</p>
            <button>CheckOut</button> <br/>
            <Link to="/">Continue shopping</Link>
        </div>
+       : <h1 cart-empty>Your cart is empty</h1>}
     </div>
    
   )
