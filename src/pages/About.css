@@ -1,3 +1,10 @@
 .about{
     text-align: center;
+    line-height: 2rem;
+    border-radius: 2px;
+    background: linear-gradient(to right,  brown, rgb(41, 30, 32), #221f1f);
+    min-height: 400px;
+    padding:30px;
+    box-shadow: 1px 0px yellow;
+    color: white;
 }

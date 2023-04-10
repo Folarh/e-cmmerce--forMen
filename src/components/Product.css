@@ -80,4 +80,8 @@ main{
       grid-template-columns: 1fr;
          
      }
+
+     .product-card img{
+        padding: 20px;
+     }
 }
