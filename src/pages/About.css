@@ -1,10 +1,42 @@
 .about{
+    margin-top: 10px;
     text-align: center;
     line-height: 2rem;
     border-radius: 2px;
-    background: linear-gradient(to right,  brown, rgb(41, 30, 32), #221f1f);
     min-height: 400px;
     padding:30px;
     box-shadow: 1px 0px yellow;
-    color: white;
+    color: black;
 }
+.about p{
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: grey;
+}
+
+.about-info{
+padding: 20px;
+}
+
+.first-para{
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+.second-para{
+    padding: 30px;
+    background-color: azure;
+}
+
+.mission{
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+.vision{
+    padding: 30px;
+    background-color: azure;
+}
+
+
+

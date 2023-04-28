@@ -10,11 +10,9 @@ export default function About() {
   },[])
   return (
    <div className="about"  data-aos="flip-left">
-    <h2>ABOUT</h2>
-    <h3>Accessories is where you can get quality and affordable male and female wears at affordable prices</h3>
     <div className="about-info">
        <img src={Polo5} alt="pic"/>
-       <h2>OUR NICHE</h2>
+       <h4>OUR NICHE</h4>
        <p className="first-para" data-aos="zoom-out">
         Welcome to  Accessorries, where you fashion meets quality and affordability.
         our brand  was founded 2023 with the aim of providing  our customers with latest

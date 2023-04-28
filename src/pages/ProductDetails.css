@@ -7,11 +7,12 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    
 }
 
 .cashout img{
-    height:500px;
-    width: 450px;
+    height:200px;
+    width: 300px;
 }
 
 .cashout-image{
@@ -22,6 +23,7 @@
 .cashout-details{
     flex: 0.6;
     padding-left: 20px;
+    font-weight: 200;
 }
 
 .cashout-details p {
@@ -79,6 +81,8 @@
 
 }
 
+
+
 .cashout-details .cart:hover{
    
      background-color: crimson;
@@ -93,9 +97,15 @@
     justify-content: space-between;
    
 }
+
+.cashout-image{
+    margin-bottom: 20px;
+    text-align: center;
+}
 .cashout img{
-    height:350px;
-    width: 350px;
+    height:200px;
+    width: 200px;
+   
 }
 }
 
@@ -106,12 +116,15 @@
     justify-content: space-between;
    
 }
-.cashout .image{
-    align-items: center;
+
+.cashout-image{
+    margin-bottom: 20px;
+    text-align: center;
 }
 .cashout img{
-    height:350px;
-    width: 250px;
+    height:150px;
+    width: 1500px;
+   
 }
 }
 

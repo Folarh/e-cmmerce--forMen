@@ -10,8 +10,6 @@ function Header() {
         </h1>
         <h3>Mid Season Sale 50%</h3>
         <p>Final clearnce takes 20% from the must-haves</p>
-        <button>Start shopping</button>
-        <button>Explore Now</button>
     </div>
    </header>
   )
